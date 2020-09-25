@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diamond Games: Host Band Murder Mystery</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'MysteryGame/style.css' %}">
+</head>
+<body>
+
+
+<div id="title-banner">
+        <a href="{% url 'MysteryGame:index' %}">
+            <div id="logo-section"> </div>
+        </a>
+        <div id="name-section">
+            <h1> DIAMOND GAMES</h1>
+            <h4> Games for friends</h4>
+        </div>
+    </div>
+    <div id="main-section">
+        <h2> HOST MURDER MYSTERY: BAND MYSTERY</h2>
+        <h3> A mystery for 7 to 9 players.</h3>
+
+        <div class="description-text">
+            <h2> Description</h2>
+            <p> To celebrate their latest hit single, the world famous band THE SCREAMING DIAMONDS host an exclusive launch party
+            on a private boat for the winners of their 'Biggest Fan' competition. The night gets a bit crazy, and everybody wakes up
+            the next morning with hazy memories and hangovers. But then someone discovers the lead singer and guitarist of the band is dead!</p>
+        </div>
+
+        <div class="description-text">
+            <h2> How to host this murder mystery</h2>
+            <ol>
+                <h3> Before the Game </h3>
+                <li> Read through the below descriptions of each of the characters. Pick which of your friends will be
+                    each character (either randomly or by who suits) </li>
+                <li> Send them their matching character code and this link <a href="{% url 'MysteryGame:join' %}">HERE</a>
+                    where they can read up on their characters and the game before you play </li>
+                <h3> During the Game </h3>
+                <li> All players (including you) keep their player guide open <a href="{% url 'MysteryGame:join' %}">HERE</a></li>
+                <li> Start by getting everyone to introduce themselves and their role </li>
+                <li> There are five rounds of clues to get revealed. When everyone is ready for the next clue, you as the
+                host can find the next code at the bottom of this page. Get everybody to type it in the code together and read their clues -
+                each round their is a PUBLIC clue for all players to see, and a PRIVATE clue which is different for each player (that they
+                can reveal or keep secret as they wish)</li>
+                <li> Keep playing till all the clues have been revealed. At the end once everyone is satisfied talking, get all players
+                to right down their recommendation, and reveal them at the same time. Then click HERE to see the final ending...</li>
+            </ol>
+
+        </div>
+
+        <div class="character-bio">
+            <p> <b>{{all_characters.0.name}}</b></p>
+            <p> {{global_character.player_one_opinion}} </p>
+            <p> Join Code = {{all_characters.0.code}}</p>
+        </div>
+
+        <div class="character-bio">
+            <p> <b>{{all_characters.1.name}}</b></p>
+            <p> {{global_character.player_two_opinion}} </p>
+            <p> Join Code = {{all_characters.1.code}}</p>
+        </div>
+
+        <div class="character-bio">
+            <p> <b>{{all_characters.2.name}}</b></p>
+            <p> {{global_character.player_three_opinion}} </p>
+            <p> Join Code = {{all_characters.2.code}}</p>
+        </div>
+
+        <div class="character-bio">
+            <p> <b>{{all_characters.3.name}}</b></p>
+            <p> {{global_character.player_four_opinion}} </p>
+            <p> Join Code = {{all_characters.3.code}}</p>
+        </div>
+
+        <div class="character-bio">
+            <p> <b>{{all_characters.4.name}}</b></p>
+            <p> {{global_character.player_five_opinion}} </p>
+            <p> Join Code = {{all_characters.4.code}}</p>
+        </div>
+
+        <div class="character-bio">
+            <p> <b>{{all_characters.5.name}}</b></p>
+            <p> {{global_character.player_six_opinion}} </p>
+            <p> Join Code = {{all_characters.5.code}}</p>
+        </div>
+
+        <div class="character-bio">
+            <p> <b>{{all_characters.6.name}}</b></p>
+            <p> {{global_character.player_seven_opinion}} </p>
+            <p> Join Code = {{all_characters.6.code}}</p>
+        </div>
+
+        <div class="character-bio">
+            <p> <b>{{all_characters.7.name}}</b></p>
+            <p> {{global_character.player_eight_opinion}} </p>
+            <p> Join Code = {{all_characters.7.code}}</p>
+        </div>
+
+        <div class="character-bio">
+            <p> <b>{{all_characters.8.name}}</b></p>
+            <p> {{global_character.player_nine_opinion}} </p>
+            <p> Join Code = {{all_characters.8.code}}</p>
+        </div>
+
+
+    </div>
+
+
+
+</body>
+</html>

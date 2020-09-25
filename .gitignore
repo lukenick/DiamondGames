@@ -21,3 +21,9 @@ $RECYCLE.BIN/
 # =========================
 # Operating System Files
 # =========================
+db.sqlite3
+.idea/DiamondGames.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/workspace.xml
+*.pyc

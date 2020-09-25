@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diamond Games: Join</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'MysteryGame/style.css' %}">
+</head>
+<body>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $("#form").on('submit', function (e) {
+      window.location.replace("character/" + $("#code").val()) ;
+      e.preventDefault();
+
+    });
+  });
+</script>
+
+
+<div id="title-banner">
+    <a href="{% url 'MysteryGame:index' %}">
+        <div id="logo-section"> </div>
+    </a>
+        <div id="name-section">
+            <h1> DIAMOND GAMES</h1>
+            <h4> Games for friends</h4>
+        </div>
+    </div>
+    <div id="main-section">
+        <div class="text-box">
+            <h2> PLAY A MURDER MYSTERY</h2>
+            <form id="form" action="null">
+                <input type="text" name="code" placeholder="Enter Your Character Code" value="" id="code" required>
+                <button type="submit" id="button">Join Game!</button>
+            </form>
+
+        </div>
+
+
+
+    </div>
+
+
+
+</body>
+</html>

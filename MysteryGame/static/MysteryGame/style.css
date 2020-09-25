@@ -1,0 +1,141 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
+
+
+
+body{
+    margin: 0;
+    background-color: #f2efc4;
+}
+
+
+/* Most info pages layout*/
+#title-banner {
+    height: 20%;
+    font-size: 30px;
+}
+#title-banner h1 {
+    font-family: 'Ranchers', cursive;
+    letter-spacing: 3px;
+}
+
+#logo-section {
+    margin-left: 15%;
+    background-color: red;
+    float: left;
+    width: 15%;
+    padding-top: 15%;
+    background: url("images/diamond-logo.png");
+    background-size: cover;
+}
+
+#name-section {
+    margin-right: 15%;
+    float: right;
+    width: 47.5%;
+    height: 100%;
+}
+#main-section {
+    margin-left: 15%;
+    margin-right: 15%;
+    clear: both;
+
+}
+
+#host-button {
+    float: left;
+    background: white url("images/host-button.png");
+    background-size: cover;
+    width: 20%;
+    padding-top: 20%;
+    border: 5px solid black;
+}
+#play-button {
+    float: left;
+    margin-left: 10%;
+    margin-right: 10%;
+    background: white url("images/play-button.png");
+    background-size: cover;
+    width: 30%;
+    padding-top: 30%;
+    border: 5px solid black;
+}
+#read-button {
+    float: left;
+    background: white url("images/read-button.png");
+    background-size: cover;
+    width: 20%;
+    padding-top: 20%;
+    border: 5px solid black;
+}
+
+.character-bio{
+    border: 3px solid black;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 20px;
+}
+
+/* Character Pages */
+#sidebar{
+    background-color: #E5DF9B;
+    border-right: 5px solid black;
+    width: 15%;
+    height: 100%;
+    position: fixed;
+    float: left;
+    font-size: 1.5em;
+    padding: 2.5%;
+}
+#main-content{
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 70%;
+    float: right;
+}
+
+.text-box{
+    background-color: white;
+    border: 5px solid black;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-align: center;
+}
+.text-box h2 {
+    font-size: 40px;
+}
+.text-box a, input, button{
+    font-size: 25px;
+}
+
+    /* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: #E5DF9B;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  margin-bottom: 5%;
+
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: #E5714F;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #E5DF9B;
+}
+
+form {
+    text-align: center
+}

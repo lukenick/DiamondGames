@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diamond Games: Home</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'MysteryGame/style.css' %}">
+</head>
+<body>
+    <div id="title-banner">
+        <a href="{% url 'MysteryGame:index' %}">
+            <div id="logo-section"> </div>
+        </a>
+        <div id="name-section">
+            <h1> DIAMOND GAMES</h1>
+            <h4> Games for friends</h4>
+        </div>
+    </div>
+    <div id="main-section">
+        <br>
+
+        <div class="button-holder">
+            <a href="{% url 'MysteryGame:host' %}">
+            <div id="host-button">
+            </div>
+            </a>
+
+        </div>
+
+
+        <a href="{% url 'MysteryGame:join' %}">
+            <div id="play-button">
+            </div>
+        </a>
+
+        <a href="{% url 'MysteryGame:join' %}">
+            <div id="read-button">
+            </div>
+        </a>
+
+
+    </div>
+
+
+</body>
+</html>

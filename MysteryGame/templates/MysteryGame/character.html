@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'MysteryGame/style.css' %}">
+</head>
+<style>
+
+</style>
+
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $("#form").on('submit', function (e) {
+      window.location.replace("" + $("#clue-code").val()) ;
+      e.preventDefault();
+
+    });
+  });
+</script>
+
+<body>
+
+
+
+<div id="sidebar">
+    <p> Jump to:</p>
+    <a href="#top">Top</a>
+    <br>
+    <br>
+    <a href="#top">How-To-Play</a>
+    <br>
+    <br>
+    <a href="#bios"> Character Bios</a>
+    <br>
+    <br>
+    <a href="#goals">Your Goals</a>
+    <br>
+    <br>
+    <a href="#clues">Uncovered Clues</a>
+
+</div>
+
+<div id="main-content">
+    <a id="top"></a>
+    <h1> MURDER ON THE HIGH C</h1>
+    <h2> Welcome {{this_character.name}}</h2>
+
+    <a class="text-section"> </a>
+    <div>
+        <h3> How To Play</h3>
+        <p> You are one of nine characters, all trying to work out who is behind the murder and what else went on last night.
+        Below you have information on each character - both information that everybody has, and information that just you have.
+        As the game progresses your host will reveal clues that provide new information for everybody, and you will also receive
+        new clues for just your character. You can choose to reveal any of this information or to keep it secret, whatever you
+        think will better suit your character and their goals.</p>
+    </div>
+
+    <a class="text-section"> </a>
+    <div>
+        <h3> The Story So Far</h3>
+        <p> Last night the SS Pennyworth set sail with nine people onboard - the four members of the wildly successful band 'Screaming Diamonds',
+        along with their manager, publicist, one of their girlfriends, the winners of a competition and of course the ships captain. After a wild night
+        of celebrating the release of the latest album, everybody eventually went to bed in the early hours of the morning. You have all emerged the next
+        day, tired and hungover to discover that the Lead Singer and Guitarist of the band Rick Diamond is dead! <br><br>
+        His body lies in the boats poolroom/study, surrounded by broken glass and a broken window. Everybody is a suspect so watch your back!</p>
+    </div>
+
+
+
+    <a id="bios"> <h2> Character Bios (Click to expand)</h2> </a>
+    <button type="button" class="collapsible"> <h3>{{all_characters.0.name}}</h3> </button>
+    <div class="content">
+        <h3> What everyone knows</h3>
+        <p> Age: {{all_characters.0.age}}
+        <br>{{global_character.player_one_opinion}}</p>
+        <h3> What you know</h3>
+        <p>{{this_character.player_one_opinion}}</p>
+    </div>
+
+    <div></div>
+
+    <button type="button" class="collapsible"> <h3>{{all_characters.1.name}}</h3> </button>
+    <div class="content">
+        <h3> What everyone knows</h3>
+        <p> Age: {{all_characters.1.age}}
+        <br>{{global_character.player_two_opinion}}</p>
+        <h3> What you know</h3>
+        <p>{{this_character.player_two_opinion}}</p>
+    </div>
+
+    <div></div>
+
+    <button type="button" class="collapsible"> <h3>{{all_characters.2.name}}</h3> </button>
+    <div class="content">
+        <h3> What everyone knows</h3>
+        <p> Age: {{all_characters.2.age}}
+        <br>{{global_character.player_three_opinion}}</p>
+        <h3> What you know</h3>
+        <p>{{this_character.player_three_opinion}}</p>
+    </div>
+
+    <div></div>
+
+    <button type="button" class="collapsible"> <h3>{{all_characters.3.name}}</h3> </button>
+    <div class="content">
+        <h3> What everyone knows</h3>
+        <p> Age: {{all_characters.3.age}}
+        <br>{{global_character.player_four_opinion}}</p>
+        <h3> What you know</h3>
+        <p>{{this_character.player_four_opinion}}</p>
+    </div>
+
+    <div></div>
+
+    <button type="button" class="collapsible"> <h3>{{all_characters.4.name}}</h3> </button>
+    <div class="content">
+        <h3> What everyone knows</h3>
+        <p> Age: {{all_characters.4.age}}
+        <br>{{global_character.player_five_opinion}}</p>
+        <h3> What you know</h3>
+        <p>{{this_character.player_five_opinion}}</p>
+    </div>
+
+    <div></div>
+
+    <button type="button" class="collapsible"> <h3>{{all_characters.5.name}}</h3> </button>
+    <div class="content">
+        <h3> What everyone knows</h3>
+        <p> Age: {{all_characters.5.age}}
+        <br>{{global_character.player_six_opinion}}</p>
+        <h3> What you know</h3>
+        <p>{{this_character.player_six_opinion}}</p>
+    </div>
+
+    <div></div>
+
+    <button type="button" class="collapsible"> <h3>{{all_characters.6.name}}</h3> </button>
+    <div class="content">
+        <h3> What everyone knows</h3>
+        <p> Age: {{all_characters.6.age}}
+        <br>{{global_character.player_seven_opinion}}</p>
+        <h3> What you know</h3>
+        <p>{{this_character.player_seven_opinion}}</p>
+    </div>
+
+    <div></div>
+
+    <button type="button" class="collapsible"> <h3>{{all_characters.7.name}}</h3> </button>
+    <div class="content">
+        <h3> What everyone knows</h3>
+        <p> Age: {{all_characters.7.age}}
+        <br>{{global_character.player_eight_opinion}}</p>
+        <h3> What you know</h3>
+        <p>{{this_character.player_eight_opinion}}</p>
+    </div>
+
+    <div></div>
+
+    <button type="button" class="collapsible"> <h3>{{all_characters.8.name}}</h3> </button>
+    <div class="content">
+        <h3> What everyone knows</h3>
+        <p> Age: {{all_characters.8.age}}
+        <br>{{global_character.player_nine_opinion}}</p>
+        <h3> What you know</h3>
+        <p>{{this_character.player_nine_opinion}}</p>
+    </div>
+
+    <a id="goals"> <h2> Goals</h2> </a>
+    <div class="text-section">
+        <h3>Your Goals</h3>
+        <p>{{this_character.goals}}</p>
+    </div>
+
+
+    <a id="clues"> <h2> Clues (Click to expand)</h2> </a>
+    {% if clue_id != "BrokenGlass" and clue_id != "SocialMedia" and clue_id != "MissingAward" and clue_id != "NewManager" and clue_id != "PregnancyTest"%}
+        <p> You haven't revealed any clues yet!</p>
+    {% endif %}
+
+    {% if clue_id == "BrokenGlass" or clue_id == "SocialMedia" or clue_id == "MissingAward" or clue_id == "NewManager" or clue_id == "PregnancyTest"%}
+    <button type="button" class="collapsible"> <h3>Clue 1</h3> </button>
+    <div class="content">
+        <h3> What everyone knows</h3>
+        <p> {{global_character.clue1}}</p>
+        <h3> What you know</h3>
+        <p>{{this_character.clue1}}</p>
+    </div>
+    {% endif %}
+
+
+    {% if clue_id == "SocialMedia" or clue_id == "MissingAward" or clue_id == "NewManager" or clue_id == "PregnancyTest"%}
+    <button type="button" class="collapsible"> <h3>Clue 2</h3> </button>
+    <div class="content">
+        <h3> What everyone knows</h3>
+        <p> {{global_character.clue2}}</p>
+        <h3> What you know</h3>
+        <p>{{this_character.clue2}}</p>
+    </div>
+    {% endif %}
+
+    {% if clue_id == "MissingAward" or clue_id == "NewManager" or clue_id == "PregnancyTest"%}
+    <button type="button" class="collapsible"> <h3>Clue 3</h3> </button>
+    <div class="content">
+        <h3> What everyone knows</h3>
+        <p> {{global_character.clue3}}</p>
+        <h3> What you know</h3>
+        <p>{{this_character.clue3}}</p>
+    </div>
+    {% endif %}
+
+    {% if clue_id == "NewManager" or clue_id == "PregnancyTest"%}
+    <button type="button" class="collapsible"> <h3>Clue 4</h3> </button>
+    <div class="content">
+        <h3> What everyone knows</h3>
+        <p> {{global_character.clue4}}</p>
+        <h3> What you know</h3>
+        <p>{{this_character.clue4}}</p>
+    </div>
+    {% endif %}
+
+    {% if clue_id == "PregnancyTest"%}
+    <button type="button" class="collapsible"> <h3>Clue 5</h3> </button>
+    <div class="content">
+        <h3> What everyone knows</h3>
+        <p> {{global_character.clue5}}</p>
+        <h3> What you know</h3>
+        <p>{{this_character.clue5}}</p>
+    </div>
+    {% endif %}
+
+    <form id="form" action="null">
+            <input type="text" name="clue-code" placeholder="Clue Code!" value="" id="clue-code" required>
+            <button type="submit" id="button">Enter Clue Code!</button>
+        </form>
+
+</div>
+
+</body>
+
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content1 = this;
+    var content2 = this.nextElementSibling;
+    if (content2.style.display === "block") {
+      content1.style.marginBottom = "5%";
+      content2.style.display = "none";
+    } else {
+      content1.style.marginBottom= "0%";
+      content2.style.display = "block";
+    }
+  });
+}
+
+</script>
+
+</html>
