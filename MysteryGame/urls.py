@@ -7,6 +7,7 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('join', views.join, name='join'),
     path('host', views.host, name='host'),
+    path('info', views.info, name='info'),
     path('band', views.band, name='band'),
     path('join?input_code=<str:character_id>', views.character, name='character'),
     path('character/<str:character_id>', views.character, name='character'),

@@ -14,6 +14,9 @@ def join(request):
 def host(request):
     return render(request, 'MysteryGame/host.html')
 
+def info(request):
+    return render(request, 'MysteryGame/info.html')
+
 def band(request):
     global_character = BandCharacter.objects.get(pk=10)
     all_characters = BandCharacter.objects.order_by('pk')
