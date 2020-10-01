@@ -42,30 +42,47 @@ body{
 
 }
 
+#host-holder {
+    float: left;
+    width: 20%;
+}
+
 #host-button {
     float: left;
     background: white url("images/host-button.png");
     background-size: cover;
-    width: 20%;
-    padding-top: 20%;
+    width: 100%;
+    padding-top: 100%;
     border: 5px solid black;
 }
-#play-button {
+
+#play-holder {
     float: left;
     margin-left: 10%;
     margin-right: 10%;
+    width: 30%;
+}
+
+#play-button {
+    float: left;
     background: white url("images/play-button.png");
     background-size: cover;
-    width: 30%;
-    padding-top: 30%;
+    width:  100%;
+    padding-top: 100%;
     border: 5px solid black;
 }
+
+#read-holder {
+    float: left;
+    width: 20%;
+}
+
 #read-button {
     float: left;
     background: white url("images/read-button.png");
     background-size: cover;
-    width: 20%;
-    padding-top: 20%;
+    width: 100%;
+    padding-top: 100%;
     border: 5px solid black;
 }
 

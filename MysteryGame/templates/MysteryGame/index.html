@@ -19,24 +19,36 @@
     <div id="main-section">
         <br>
 
+        <div id="host-holder">
         <div class="button-holder">
             <a href="{% url 'MysteryGame:host' %}">
-            <div id="host-button">
-            </div>
+                <div id="host-button">
+                </div>
             </a>
 
         </div>
-
-
-        <a href="{% url 'MysteryGame:join' %}">
-            <div id="play-button">
+            <br>
+            Set up a game to play with friends
             </div>
-        </a>
 
-        <a href="{% url 'MysteryGame:join' %}">
-            <div id="read-button">
-            </div>
-        </a>
+        <div id="play-holder">
+            <a href="{% url 'MysteryGame:join' %}">
+                <div id="play-button">
+                </div>
+            </a>
+                Play a game a friend has organised
+
+
+        </div>
+
+        <div id="read-holder">
+            <a href="{% url 'MysteryGame:join' %}">
+                <div id="read-button">
+                </div>
+            </a>
+            Learn more about how this works
+        </div>
+
 
 
     </div>
