@@ -5,6 +5,8 @@ from django.db import models
 class BandCharacter(models.Model):
     name = models.CharField(max_length=100)
     age = models.IntegerField(default=0)
+    own_description = models.CharField(max_length=1500)
+    costume_suggestion = models.CharField(max_length=1500)
     player_one_opinion = models.CharField(max_length=1500)
     player_two_opinion = models.CharField(max_length=1500)
     player_three_opinion = models.CharField(max_length=1500)

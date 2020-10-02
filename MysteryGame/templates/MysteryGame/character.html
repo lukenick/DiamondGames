@@ -26,37 +26,25 @@
 
 
 <div id="sidebar">
-    <p> Jump to:</p>
-    <a href="#top">Top</a>
+    <h2> Quick Links</h2>
+    <h3> Jump to:</h3>
+    <a href="#top">Top & How-To-Play</a>
     <br>
     <br>
-    <a href="#top">How-To-Play</a>
+    <a href="#you">About You</a>
     <br>
     <br>
     <a href="#bios"> Character Bios</a>
-    <br>
-    <br>
-    <a href="#goals">Your Goals</a>
     <br>
     <br>
     <a href="#clues">Uncovered Clues</a>
 
 </div>
 
-<div id="main-content">
+<div id="main-content" class="long-text" >
     <a id="top"></a>
-    <h1> MURDER ON THE HIGH C</h1>
-    <h2> Welcome {{this_character.name}}</h2>
-
-    <a class="text-section"> </a>
-    <div>
-        <h3> How To Play</h3>
-        <p> You are one of nine characters, all trying to work out who is behind the murder and what else went on last night.
-        Below you have information on each character - both information that everybody has, and information that just you have.
-        As the game progresses your host will reveal clues that provide new information for everybody, and you will also receive
-        new clues for just your character. You can choose to reveal any of this information or to keep it secret, whatever you
-        think will better suit your character and their goals.</p>
-    </div>
+    <h1 style="text-align: center;"> Murder on the High C</h1>
+    <h2 style="text-align: center;"> Welcome {{this_character.name}}</h2>
 
     <a class="text-section"> </a>
     <div>
@@ -68,9 +56,49 @@
         His body lies in the boats poolroom/study, surrounded by broken glass and a broken window. Everybody is a suspect so watch your back!</p>
     </div>
 
+    <a class="text-section"> </a>
+    <div>
+        <h3> How To Play</h3>
+        <p> You are one of nine characters, all trying to work out who is behind the murder and what else went on last night.
+        Below you have information on each character - both information that everybody has, and information that just you have.
+        As the game progresses your host will reveal clues that provide new information for everybody, and you will also receive
+        new clues for just your character. You can choose to reveal any of this information or to keep it secret, whatever you
+        think will better suit your character and their goals.</p>
+    </div>
 
+    <hr>
 
-    <a id="bios"> <h2> Character Bios (Click to expand)</h2> </a>
+    <a id="goals"></a><h2 style="text-align: center"> About You </h2>
+    <h2> Who Are You</h2>
+    <div class="text-section">
+        <p>{{this_character.own_description}}</p>
+    </div>
+
+    <h2> Costume Suggestions</h2>
+    <div class="text-section">
+        <p>{{this_character.costume_suggestion}}</p>
+    </div>
+
+    <h2> Your Goals</h2>
+    <div class="text-section">
+        <p>{{this_character.goals}}</p>
+    </div>
+
+    <hr>
+
+    <a id="bios"></a> <h2 style="text-align: center"> Character Bios (Click to expand)</h2>
+
+    <button type="button" class="collapsible"> <h3>Rick Diamond</h3> </button>
+    <div class="content">
+        <h3> What everyone knows</h3>
+        <p> Age: {{all_characters.10.age}}
+        <br>{{global_character.deceased_opinion}}</p>
+        <h3> What you know</h3>
+        <p>{{this_character.deceased_opinion}}</p>
+    </div>
+
+    <div></div>
+
     <button type="button" class="collapsible"> <h3>{{all_characters.0.name}}</h3> </button>
     <div class="content">
         <h3> What everyone knows</h3>
@@ -168,14 +196,10 @@
         <p>{{this_character.player_nine_opinion}}</p>
     </div>
 
-    <a id="goals"> <h2> Goals</h2> </a>
-    <div class="text-section">
-        <h3>Your Goals</h3>
-        <p>{{this_character.goals}}</p>
-    </div>
 
+    <hr>
 
-    <a id="clues"> <h2> Clues (Click to expand)</h2> </a>
+    <a id="clues"> <h2 style="text-align: center"> Clues (Click to expand)</h2> </a>
     {% if clue_id != "BrokenGlass" and clue_id != "SocialMedia" and clue_id != "MissingAward" and clue_id != "NewManager" and clue_id != "PregnancyTest"%}
         <p> You haven't revealed any clues yet!</p>
     {% endif %}
