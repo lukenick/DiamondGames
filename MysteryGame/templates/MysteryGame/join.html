@@ -11,7 +11,7 @@
 <script>
   $(document).ready(function () {
     $("#form").on('submit', function (e) {
-      window.location.replace("character/" + $("#code").val()) ;
+      window.location.assign("character/" + $("#code").val()) ;
       e.preventDefault();
 
     });
