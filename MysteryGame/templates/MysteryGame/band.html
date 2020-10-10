@@ -36,20 +36,21 @@
                 <li> Read through the below descriptions of each of the characters. Pick which of your friends will be
                     each character (either randomly or by who suits) </li>
                 <li> Send them their matching character code and this link <a href="{% url 'MysteryGame:join' %}">HERE</a>
-                    where they can read up on their characters and the game before you play </li>
+                    where they can read up on their characters and the game before you play. </li>
                 <h3> During the Game </h3>
                 <li> All players (including you) keep their player guide open <a href="{% url 'MysteryGame:join' %}">HERE</a></li>
                 <li> Start by getting everyone to introduce themselves and their role </li>
                 <li> There are five rounds of clues to get revealed. When everyone is ready for the next clue, you as the
                 host can find the next code at the bottom of this page. Get everybody to type it in the code together and read their clues -
                 each round their is a PUBLIC clue for all players to see, and a PRIVATE clue which is different for each player (that they
-                can reveal or keep secret as they wish)</li>
+                can reveal or keep secret as they wish). The clues for this game are found at the bottom of this page.</li>
                 <li> Keep playing till all the clues have been revealed. At the end once everyone is satisfied talking, get all players
                 to right down their recommendation, and reveal them at the same time. Then click HERE to see the final ending...</li>
             </ol>
 
         </div>
 
+        <h2> Pick characters to give to your friends</h2>
         <div class="character-bio">
             <p> <b>{{all_characters.0.name}}</b></p>
             <p> {{global_character.player_one_opinion}} </p>
@@ -104,9 +105,50 @@
             <p> Join Code = {{all_characters.8.code}}</p>
         </div>
 
+        <h2> Tap a clue code when you are ready to reveal it</h2>
+        <button type="button" class="collapsible"> <h3>Clue Code 1</h3> </button>
+        <div class="content">
+            <h2>BrokenGlass</h2>
+        </div>
+        <button type="button" class="collapsible"> <h3>Clue Code 2</h3> </button>
+        <div class="content">
+            <h2>SocialMedia</h2>
+        </div>
+        <button type="button" class="collapsible"> <h3>Clue Code 3</h3> </button>
+        <div class="content">
+            <h2>MissingAward</h2>
+        </div>
+        <button type="button" class="collapsible"> <h3>Clue Code 4</h3> </button>
+        <div class="content">
+            <h2>NewManager</h2>
+        </div>
+        <button type="button" class="collapsible"> <h3>Clue Code 5</h3> </button>
+        <div class="content">
+            <h2>PregnancyTest</h2>
+        </div>
 
     </div>
 
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content1 = this;
+    var content2 = this.nextElementSibling;
+    if (content2.style.display === "block") {
+      content1.style.marginBottom = "5%";
+      content2.style.display = "none";
+    } else {
+      content1.style.marginBottom= "0%";
+      content2.style.display = "block";
+    }
+  });
+}
+
+</script>
 
 
 </body>
