@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Diamond Games: Play</title>
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'MysteryGame/style.css' %}">
 </head>
@@ -14,7 +14,8 @@
 <script>
   $(document).ready(function () {
     $("#form").on('submit', function (e) {
-      window.location.assign(window.location + "/"+ $("#clue-code").val()) ;
+      window.location.assign(window.location.href.split('#')[0].split('-')[0] + "-"+ $("#clue-code").val()) ;
+      // Previous line strips off everything after a # or - symbol (# is used in anchors, - is used to separate character id and clue code)
       e.preventDefault();
 
     });
@@ -202,7 +203,6 @@
 
 
     <hr>
-
     <a id="clues"> <h2 style="text-align: center"> Clues (Click to expand)</h2> </a>
     {% if clue_id != "BrokenGlass" and clue_id != "SocialMedia" and clue_id != "MissingAward" and clue_id != "NewManager" and clue_id != "PregnancyTest"%}
         <p> You haven't revealed any clues yet!</p>
